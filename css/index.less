@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alger 椤甸潰甯冨眬</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <main>
+        <article class="hot">
+            <section></section>
+            <section></section>
+        </article>
+        <article class="goods">
+            <section class="ad"></section>
+            <section class="lists">
+                <ul>
+                    <li>123</li>
+                    <li>456</li>
+                    <li>789</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+</body>
+</html>            display: table-row;
+
+            li {
+                display: table-cell;
+                border: solid 1px #ddd;
+                padding: 10px;
+            }
+        }
+    }
+
+}
+
+
+/*浮动.html*/
+
+/* 清除浮动带来的影响 
+*1.加空div
+*2.加::after 把他变为块级元素并清除浮动
+*3.添加overflow:hidden;  触发bfc使div里的浮动元素也计算高度
+*/
+
+.clear{
+    clear: both;
+}
+
+// .main::after{
+//     content: "";
+//     clear: both;
+//     display: block;
+// }
+.main {
+    width: 500px;
+    border: solid 2px #333333;
+    margin: 0 auto;
+    overflow: hidden;
+    div {
+        width: 200px;
+        height: 200px;
+    }
+
+    div:nth-of-type(1) {
+        background: red;
+        float: left;
+    }
+
+    div:nth-of-type(2) {
+        background-color: #538162;
+        float: right;
+    }
+
+    span {
+        width: 200px;
+        height: 50px;
+        float: left;
+        background-color: #b4f1c9;
+        margin-top: 20px;
+    }
+
+    span:nth-of-type(1) {
+        float: left;
+    }
+
+    span:nth-of-type(2) {
+        float: right;
+    }
+
+}
+
+.box{
+
+    div{
+        width: 200px;
+        height: 200px;
+    }
+
+    .red{
+        border: solid 5px red;
+        float: left;
+    }
+
+    .green{
+        float: right;
+        border: solid 5px green;
+    }
+
+    .blue{
+        background: blue;
+        clear: both;/*清除两边浮动带来的影响*/
+    }
+}
+
+/* 页面布局 1 */
+
+
+main{
+    width: 1020px;
+    // border: solid 2px rgb(26, 75, 109);
+    margin: 0 auto;
+    overflow: hidden;
+    // padding: 10px;
+    article.hot{
+       border:  solid 2px red;
+       overflow: hidden;
+       section{
+           width: 500px;
+           height: 300px;
+           background: #333333;
+           &:nth-of-type(1){
+               float: left;
+           }
+           &:nth-of-type(2){
+               float: right;
+           }
+       }
+    }
+    article.goods{
+        margin-top: 20px;
+        section.ad{
+            width: 200px;
+            height: 300px;
+            background: #538162;
+            float: left;
+        }
+        section.lists{
+            width: 820px;
+            height: 300px;
+            background: #849b4f;
+            float: left;
+
+            ul{
+                list-style: none;
+                li{
+                    float: left;
+                    padding: 20px;
+                    width: 200px;
+                    height: 260px;
+                    border-right: solid 2px black;
+                    background: #f3f3f3;
+                }
+            }
+        }
+    }
+}
+
+
+// 页面布局2
+
