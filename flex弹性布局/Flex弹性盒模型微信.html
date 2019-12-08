@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex弹性盒模型微信</title>
+
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+       body{
+            height: 100vh;
+           display: flex;
+           flex-direction: column;
+        }
+        main{
+            background-color: #ddd;
+            flex: 1;
+        }
+        footer{
+            background: linear-gradient(to top,#f3f3f3,#CCC,#f3f3f3);
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        footer div{
+            flex: 1;
+            text-align: center;
+            line-height: 3em;
+            color: #666;
+        }
+        footer div:nth-child(n+2){
+            border-left: 1px solid #FFF;
+        }
+
+        article{
+            border: solid 5px blue;
+            width: 40%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        article *{
+            width: 100px;
+            height: 100px;
+            background: rebeccapurple;
+            padding: 10px;
+            box-sizing: border-box;
+            background-clip: content-box;
+            color: white;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <article>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+    </main>
+    <footer>
+        <div>首页</div>
+        <div>列表</div>
+        <div>你好</div>
+        <div>首页</div>
+        <div>列表</div>
+        <div>你好</div>
+    </footer>
+</body>
+
+</html>

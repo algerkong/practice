@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>普通布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            height: 100vh;
+            background-color: #ddd;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100vw;
+            height: 50px;
+            background: linear-gradient(to bottom, #f3f3f3,#ddd,#f3f3f3);
+            border-top: solid 2px #ddd;
+        }
+        footer div{
+            float: left;
+            width: 32%;
+            height: 100%;
+            text-align: center;
+            line-height: 3em;
+            color: #666;
+        }
+        footer div:nth-child(n+2){
+            border-left: solid 2px #ccc;
+        }
+    </style>
+</head>
+
+
+<body>
+    <main></main>
+    <footer>
+        <div>首页</div>
+        <div>列表</div>
+        <div>你好</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex布局测试</title>
+    <style>
+        .mainPag{
+            width: 1220px;
+            background-color: black;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100%;
+            display: flex;
+            flex-direction: row;/*以行排列*/
+            flex-wrap: wrap;/*不加多余换行元素会以平均大小一行显示 ，多余换行，必须加排列方向，*/
+        }
+        .main div{
+            width: 33.3%;
+            height: 300px;
+            background-color: aliceblue;
+            box-sizing: border-box;
+            padding: 10px 0;
+            background-clip: content-box;
+            font-size: 100px;
+        }
+        .main div:nth-child(3n+2){
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainPag">
+        <div class="main">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+    </div>
+</body>
+</html>
