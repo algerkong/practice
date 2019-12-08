@@ -63,11 +63,23 @@ main.index {
 }
 main.index article {
   width: 900px;
-  height: 900px;
   border: 2px solid red;
   box-sizing: border-box;
-  background-color: #538162;
   float: left;
+}
+main.index article ul {
+  list-style: none;
+}
+main.index article ul li {
+  line-height: 30px;
+  background-color: #ebebeb;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+main.index article ul li a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 20px;
 }
 main.index aside {
   width: 280px;
