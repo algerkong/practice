@@ -45,7 +45,9 @@
                 <li><a href="浮动.html">浮动</a></li>
                 <li><a href="页面布局1.html">页面布局1</a></li>
                 <li><a href="页面布局2.html">页面布局2</a></li>
-                <li><a href=""></a></li>
+                <li><a href="flex弹性布局/普通微信布局.html">普通微信布局</a></li>
+                <li><a href="flex弹性布局/Flex弹性盒模型微信.html">Flex弹性盒模型微信</a></li>
+                <li><a href="flex弹性布局/布局测试.html">布局测试</a></li>
             </ul>
         </article>
         <!-- 右 -->
@@ -55,7 +57,7 @@
     </main>
     <!-- 主体   end -->
     <footer>
-        <div>我们的使命是，好好学习 天天向上</div>
+        <div><p id="hitokoto"> </p></div>
         <div>Copyright © 2010-2018 houdunren.com All Rights Reserved 京ICP备12048441号-3 <br>
             : 010-86467608 : 2300071698@qq.com <br>
             编码: 海豚日记
@@ -63,6 +65,28 @@
         <a id="tit" href="1"></a>
     </footer>
 
+    <script>
+		clock();
+		var int = self.setInterval("clock()", 5000);
+
+		function clock() {
+			fetch('https://v1.hitokoto.cn/?c=g')
+				.then(function (res) {
+					return res.json();
+				})
+				.then(function (data) {
+					var hitokoto = document.getElementById('hitokoto');
+					if (data.hitokoto.length < 40) {
+						hitokoto.innerText = "「 " + data.hitokoto + " 」";
+					}
+
+
+				})
+				.catch(function (err) {
+					console.error(err);
+				})
+		}
+	</script>
 </body>
 
 </html>
