@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alger CSS伪类选择器</title>
+
+    <style>
+        /* 链接颜色 */
+        a:link {
+            color: red;
+        }
+
+        /* 点击之后 */
+        a:visited {
+            color: blue;
+        }
+
+        /*鼠标进过*/
+        a:hover {
+            color: yellow;
+        }
+
+        /* 按下鼠标不放 */
+        a:active {
+            color: green;
+        }
+
+        div {
+            height: 1000px;
+            border: 1px solid red;
+            font-size: 30px;
+        }
+
+        /*用a标签跳转到此div时文字变色*/
+        div:target {
+            color: blue;
+
+        }
+
+        li {
+            border: 2px solid #333333;
+            margin-bottom: 20px;
+        }
+
+        /*隐藏空的li标签*/
+        li:empty {
+            display: none;
+        }
+
+        xmp {
+            width: 100%;
+            overflow: hidden;
+            border: 2px solid #333;
+            font-size: 16px;
+            color: #FFFFFF;
+            background-color: #282c34;
+            border-radius: 5px;
+        }
+
+        xmp::selection {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1><a href="#alger">www.myalger.cf/practice/</a></h1>
+    <div></div>
+    <div id="alger">
+        Alger KongCheng
+    </div>
+
+    <ul>
+        <li>12313232</li>
+        <li></li>
+    </ul>
+
+    <xmp>
+        <style>
+            /* 链接颜色 */
+            a:link {
+                color: red;
+            }
+
+            /* 点击之后 */
+            a:visited {
+                color: blue;
+            }
+
+            /*鼠标进过*/
+            a:hover {
+                color: yellow;
+            }
+
+            /* 按下鼠标不放 */
+            a:active {
+                color: green;
+            }
+
+            /*用a标签跳转到此div时文字变色*/
+            div:target {
+                color: blue;
+            }
+
+            /*隐藏空的li标签*/
+            li:empty {
+                display: none;
+            }
+        </style>
+    </xmp>
+</body>
+
+</html>

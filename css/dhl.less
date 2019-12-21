@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav1 {
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+
+    ul {
+        width: 100%;
+        height: 100%;
+
+        li {
+            width: 12.5%;
+            float: left;
+            box-sizing: border-box;
+            position: relative;
+            background: linear-gradient(to bottom, rgb(7, 118, 182), rgb(0, 0, 0), rgb(7, 118, 182));
+
+            &:nth-child(n+2) {
+                border-left: #ddd solid 2px;
+            }
+
+            a {
+                text-align: center;
+                display: block;
+                line-height: 50px;
+                color: white;
+            }
+
+            &:hover {
+                background: linear-gradient(to bottom, rgb(7, 118, 182), rgb(3, 57, 107), rgb(7, 118, 182));
+            }
+
+            &:hover ul {
+                max-height: 500px;
+            }
+
+            ul {
+                display: block;
+                position: absolute;
+                max-height: 0px;
+                transition: .5s;
+                overflow: hidden;
+                height: 500px;
+
+                .li-2 {
+                    width: 100%;
+                    float: none;
+                    border-left: none;
+                }
+            }
+
+        }
+    }
+}
+
+
+.nav2-pag {
+    width: 100%;
+    background-color: #1b6259;
+    padding-top: 40px;
+    .nav2 {
+        width: 1200px;
+        margin: 0 auto;
+        &>ul {
+            display: flex;
+            width: 1200px;
+            &>li {
+                flex: 1;
+                border-radius: 30% 30% 0 0;
+                background-color: #28abbd;
+                text-align: center;
+                transition: .5s;
+                border-left: 5px solid #1b6259;
+                border-right: 5px solid #1b6259;
+                box-sizing: border-box;
+                position: relative;
+                a {
+                    display: block;
+                    padding: 15px 0;
+                    color: white;
+                }
+
+                &:hover {
+                    background-color: #038d6a;
+                }
+
+                &:hover ul {
+                    max-height: 500px;
+                }
+
+                &>ul {
+                    position: absolute;
+                    overflow: hidden;
+                    transition: 1s;
+                    max-height: 0px;
+                    // display: flex;
+                    width: 100%;
+                    background-color: #1b6259;
+                    border-bottom: 5px solid #038d6a;
+                    // flex-direction: column;/*以行排列*/
+                    // flex-wrap: wrap;/*不加多余换行元素会以平均大小一行显示 ，多余换行，必须加排列方向，*/
+                    &>li {
+                        background-color: #28abbd;
+                        border-radius: 0;
+                        border: none;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+}
