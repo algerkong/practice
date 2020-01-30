@@ -8,9 +8,24 @@
     <title>Alger CSS结构选择器</title>
 
     <style>
+        .main {
+            width: 1200px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
         xmp {
-            color: black;
-            font-size: 20px;
+            width: 100%;
+            overflow: hidden;
+            font-size: 16px;
+            color: #FFFFFF;
+            background-color: #282c34;
+            border-radius: 10px;
+        }
+
+        xmp::selection {
+            background-color: #FFFFFF;
+            color: #333333;
         }
 
         main article>h1 {
@@ -29,42 +44,43 @@
 </head>
 
 <body>
-    <main>
-        <article>
-            <h1>Alger liujunjie</h1>
-            <h2>http://www.myalger.cf/practice/</h2>
-            <h2>http://www.myalger.cf/</h2>
-            <div>
-                <h1>刘俊杰你好</h1>
-            </div>
-        </article>
-    </main>
+    <div class="main">
+        <main>
+            <article>
+                <h1>Alger liujunjie</h1>
+                <h2>http://www.myalger.cf/practice/</h2>
+                <h2>http://www.myalger.cf/</h2>
+                <div>
+                    <h1>刘俊杰你好</h1>
+                </div>
+            </article>
+        </main>
 
 
-    <xmp>
+        <xmp>
+            <style>
+                /*选择这下面的所有h1*/
+                main article h1 {
+                    color: red;
+                }
 
-        <style>
-            /*选择这下面的所有h1*/
-            main article h1 {
-                color: red;
-            }
+                /*只选择article的子元素*/
+                main article>h1 {
+                    color: red;
+                }
 
-            /*只选择article的子元素*/
-            main article>h1 {
-                color: red;
-            }
+                /*选择h1的h2所有兄弟元素，即h1的同级h2元素*/
+                main article h1~h2 {
+                    color: green;
+                }
 
-            /*选择h1的h2所有兄弟元素，即h1的同级h2元素*/
-            main article h1~h2 {
-                color: green;
-            }
-
-            /*选择h1紧挨着的h2标签*/
-            main article h1+h2 {
-            color: yellow;
-        }
-        </style>
-    </xmp>
+                /*选择h1紧挨着的h2标签*/
+                main article h1+h2 {
+                    color: yellow;
+                }
+            </style>
+        </xmp>
+    </div>
 </body>
 
 </html>
