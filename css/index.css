@@ -69,6 +69,7 @@ main.index article {
   float: left;
   background-color: #FFFFFF;
   padding: 0 25px;
+  border-radius: 5px;
 }
 main.index article ul {
   list-style: none;
@@ -91,6 +92,7 @@ main.index article ul li a:hover {
   color: #3e5664;
 }
 main.index aside {
+  border-radius: 5px;
   padding: 10px;
   width: 280px;
   height: 300px;
