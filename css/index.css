@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  user-select: none;
 }
 /*index 样式 */
 body.bdcolor {
@@ -63,32 +64,40 @@ main.index {
 }
 main.index article {
   width: 900px;
-  border: 2px solid #ddd;
+  border: 1px solid #ddd;
   box-sizing: border-box;
   float: left;
-  padding-bottom: 20px;
+  background-color: #FFFFFF;
+  padding: 0 25px;
 }
 main.index article ul {
   list-style: none;
 }
 main.index article ul li {
-  line-height: 30px;
-  background-color: #ebebeb;
-  margin-top: 20px;
-  padding-left: 30px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-bottom: 1px solid #DDD;
 }
 main.index article ul li a {
-  color: #3e5664;
+  color: #6c757d;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
+  display: inline-block;
+}
+main.index article ul li a:visited {
+  color: #c02849;
+}
+main.index article ul li a:hover {
+  color: #3e5664;
 }
 main.index aside {
+  padding: 10px;
   width: 280px;
   height: 300px;
   float: right;
-  border: solid 2px #333;
+  border: solid 1px #ddd;
   box-sizing: border-box;
-  background-color: #b4f1c9;
+  background-color: #FFFFFF;
 }
 footer {
   margin-top: 20px;

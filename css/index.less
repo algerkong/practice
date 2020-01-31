@@ -1,62 +1,72 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
+    user-select:none;
 }
 
 
 
 
 /*index 样式 */
-body.bdcolor{
+body.bdcolor {
     background-color: #f3f1ef;
 }
+
 //-------------头部
-header.index{
+header.index {
     border-bottom: 4px solid rgb(74, 133, 211);
     box-shadow: 0 5px 5px rgba(100, 100, 100, .3);
-    nav{
+
+    nav {
         padding: 0 10px;
         width: 1200px;
         height: 60px;
         line-height: 60px;
         margin: 0 auto;
-        
-        ul{
+
+        ul {
             float: left;
             width: 100%;
             list-style: none;
-            li{
+
+            li {
                 float: left;
                 width: 100px;
-                a{
+
+                a {
                     color: #555;
                     text-decoration: none;
-                   
+
                 }
-                &:nth-of-type(1) a{
+
+                &:nth-of-type(1) a {
                     color: darkcyan;
                     font-size: 20px;
                     font-weight: bold;
                 }
-                &:nth-of-type(1) a:hover{
+
+                &:nth-of-type(1) a:hover {
                     color: rgb(2, 85, 85);
                 }
             }
-            div.button{
+
+            div.button {
                 float: right;
                 width: 120px;
-                button{
+
+                button {
                     width: 50px;
                     height: 25px;
-                    &:nth-of-type(1){
+
+                    &:nth-of-type(1) {
                         background-color: rgb(76, 172, 189);
                         color: white;
                     }
-                    &:nth-of-type(2){
+
+                    &:nth-of-type(2) {
                         color: rgb(76, 172, 189);
-                        border: solid 2px  rgb(76, 172, 189);
+                        border: solid 2px rgb(76, 172, 189);
                     }
                 }
             }
@@ -65,86 +75,107 @@ header.index{
 }
 
 //-------------主体
-main.index{
+main.index {
     width: 1200px;
     margin: 0 auto;
     overflow: hidden;
     margin-top: 20px;
-    article{
+
+    article {
         width: 900px;
-        border: 2px solid #ddd;
+        border: 1px solid #ddd;
         box-sizing: border-box;
         float: left;
-        padding-bottom: 20px;
+        background-color: #FFFFFF;
+        padding: 0 25px;
 
-        ul{
+        ul {
             list-style: none;
-            li{
-                line-height: 30px;
-                background-color: #ebebeb;
-                margin-top: 20px;
-                padding-left: 30px;
-                a{
-                    color: #3e5664;
+
+            li {
+                box-sizing: border-box;
+                padding: 10px;
+                border-bottom: 1px solid #DDD;
+
+                a {
+                    color: #6c757d;
                     text-decoration: none;
-                    font-size: 20px;
+                    font-size: 18px;
+                    display: inline-block;
+
+                    &:visited {
+                        color: #c02849;
+                    }
+
+                    &:hover {
+                        color: #3e5664;
+                    }
                 }
             }
         }
     }
 
-    aside{
+    aside {
+        padding: 10px;
         width: 280px;
         height: 300px;
         float: right;
-        border: solid 2px #333;
+        border: solid 1px #ddd;
         box-sizing: border-box;
-        background-color: #b4f1c9;
+        background-color: #FFFFFF;
     }
 }
 
-footer{
+footer {
     margin-top: 20px;
     background-color: #fff;
     border-top: solid 2px #ddd;
     padding: 30px;
     color: #555;
     font-size: 15px;
-    div{
-        margin: 0 auto; 
+
+    div {
+        margin: 0 auto;
         text-align: center;
         padding-bottom: 15px;
         width: 1100px;
     }
-    div:nth-of-type(1){
+
+    div:nth-of-type(1) {
         border-bottom: #d8d8d8 solid 1px;
     }
-    div:nth-of-type(2){
-        padding-top:20px;
+
+    div:nth-of-type(2) {
+        padding-top: 20px;
     }
 }
 
 
 /*表格。html*/
 
-.table{
+.table {
     display: table;
-    section{
-        &:nth-of-type(1){
+
+    section {
+        &:nth-of-type(1) {
             display: table-header-group;
             background: #538162;
             color: white;
         }
-        &:nth-of-type(2){
+
+        &:nth-of-type(2) {
             display: table-row-group;
         }
-        &:nth-of-type(3){
+
+        &:nth-of-type(3) {
             display: table-footer-group;
             background: #f3f3f3;
         }
-        ul{
+
+        ul {
             display: table-row;
-            li{
+
+            li {
                 display: table-cell;
                 border: solid 1px #ddd;
                 padding: 10px;
@@ -163,7 +194,7 @@ footer{
 *3.添加overflow:hidden;  触发bfc使div里的浮动元素也计算高度
 */
 
-.clear{
+.clear {
     clear: both;
 }
 
@@ -177,6 +208,7 @@ footer{
     border: solid 2px #333333;
     margin: 0 auto;
     overflow: hidden;
+
     div {
         width: 200px;
         height: 200px;
@@ -210,70 +242,79 @@ footer{
 
 }
 
-.box{
+.box {
 
-    div{
+    div {
         width: 200px;
         height: 200px;
     }
 
-    .red{
+    .red {
         border: solid 5px red;
         float: left;
     }
 
-    .green{
+    .green {
         float: right;
         border: solid 5px green;
     }
 
-    .blue{
+    .blue {
         background: blue;
-        clear: both;/*清除两边浮动带来的影响*/
+        clear: both;
+        /*清除两边浮动带来的影响*/
     }
 }
 
 /* 页面布局 1 */
 
 
-main{
+main {
     width: 1020px;
     // border: solid 2px rgb(26, 75, 109);
     margin: 0 auto;
     overflow: hidden;
+
     // padding: 10px;
-    article.hot{
-       border:  solid 2px red;
-       overflow: hidden;
-       section{
-           width: 500px;
-           height: 300px;
-           background: #333333;
-           &:nth-of-type(1){
-               float: left;
-           }
-           &:nth-of-type(2){
-               float: right;
-           }
-       }
+    article.hot {
+        border: solid 2px red;
+        overflow: hidden;
+
+        section {
+            width: 500px;
+            height: 300px;
+            background: #333333;
+
+            &:nth-of-type(1) {
+                float: left;
+            }
+
+            &:nth-of-type(2) {
+                float: right;
+            }
+        }
     }
-    article.goods{
+
+    article.goods {
         margin-top: 20px;
-        section.ad{
+
+        section.ad {
             width: 200px;
             height: 300px;
             background: #538162;
             float: left;
         }
-        section.lists{
+
+        section.lists {
             width: 820px;
             height: 300px;
             background: #849b4f;
             float: left;
 
-            ul{
+            ul {
                 list-style: none;
-                li{
+
+                li {
                     float: left;
                     padding: 20px;
                     width: 200px;

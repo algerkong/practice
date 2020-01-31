@@ -8,6 +8,9 @@
     <title>Alger CSS元素编号选择</title>
 
     <style>
+        *{
+            font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace!important;
+        }
         xmp {
             width: 100%;
             overflow: hidden;
@@ -98,7 +101,7 @@
             main>ul h1:nth-of-type(1) {
             color: brown;
             }
-            
+
             /* 选择前五个并且排除第三个和第一个 */
             main>ul li:nth-child(-n+5):not(:nth-child(3)):not(:first-child){
             border: 2px solid black;

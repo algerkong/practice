@@ -15,7 +15,7 @@
     <header class="index">
         <nav>
             <ul>
-                <li><a href="">Alger</a></li>
+                <li><a href="http://www.myalger.cf/practice/">Alger</a></li>
                 <li><a href="">标签栏</a></li>
                 <li><a href="">标签栏</a></li>
                 <li><a href="">标签栏</a></li>
@@ -27,7 +27,7 @@
                     <button>登录</button>
                     <button>注册</button>
                 </div>
-            </ul>   
+            </ul>
         </nav>
     </header>
     <!-- 头   end -->
@@ -58,12 +58,19 @@
         </article>
         <!-- 右 -->
         <aside>
-
+            <h2>小知识</h2>
+            <pre>
+文字行高不要使用固定宽高，
+使用em更加合适
+line-height: 1.5em;
+            </pre>
         </aside>
     </main>
     <!-- 主体   end -->
     <footer>
-        <div><p id="hitokoto"> </p></div>
+        <div>
+            <p id="hitokoto"> </p>
+        </div>
         <div>Copyright © 2010-2018 houdunren.com All Rights Reserved 京ICP备12048441号-3 <br>
             : 010-86467608 : 2300071698@qq.com <br>
             编码: 海豚日记
@@ -72,27 +79,27 @@
     </footer>
 
     <script>
-		clock();
-		var int = self.setInterval("clock()", 5000);
+        clock();
+        var int = self.setInterval("clock()", 5000);
 
-		function clock() {
-			fetch('https://v1.hitokoto.cn/?c=g')
-				.then(function (res) {
-					return res.json();
-				})
-				.then(function (data) {
-					var hitokoto = document.getElementById('hitokoto');
-					if (data.hitokoto.length < 40) {
-						hitokoto.innerText = "「 " + data.hitokoto + " 」";
-					}
+        function clock() {
+            fetch('https://v1.hitokoto.cn/?c=g')
+                .then(function (res) {
+                    return res.json();
+                })
+                .then(function (data) {
+                    var hitokoto = document.getElementById('hitokoto');
+                    if (data.hitokoto.length < 40) {
+                        hitokoto.innerText = "「 " + data.hitokoto + " 」";
+                    }
 
 
-				})
-				.catch(function (err) {
-					console.error(err);
-				})
-		}
-	</script>
+                })
+                .catch(function (err) {
+                    console.error(err);
+                })
+        }
+    </script>
 </body>
 
 </html>
