@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alger CSS元素编号选择</title>
+
+    <style>
+        xmp {
+            width: 100%;
+            overflow: hidden;
+            font-size: 16px;
+            color: #FFFFFF;
+            background-color: #282c34;
+            border-radius: 10px;
+        }
+
+        xmp::selection {
+            background-color: #FFFFFF;
+            color: #333333;
+        }
+
+        main {
+            width: 1200px;
+            overflow: hidden;
+            margin: 0 auto;
+            font-size: 30px;
+        }
+
+        /* 选择第一个 */
+        main>ul li:nth-child(1) {
+            color: red;
+        }
+
+        /* 选择偶数项 */
+        main>ul li:nth-child(2n) {
+            color: blue;
+        }
+
+        /* 选择最后一个 */
+        main>ul li:nth-last-child(1) {
+            color: yellow;
+        }
+
+        /*选择最后两个*/
+        main>ul li:nth-last-child(-n+2) {
+            color: green;
+        }
+
+        /* 选择第一个h1标签 */
+        main>ul h1:nth-of-type(1) {
+            color: brown;
+        }
+
+        /* 选择前五个并且排除第三个和第一个 */
+        main>ul li:nth-child(-n+5):not(:nth-child(3)):not(:first-child) {
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <ul>
+            <li>Alger kongcheng nihao </li>
+            <li>Alger kongcheng nihao </li>
+            <li>Alger kongcheng nihao </li>
+            <li>Alger kongcheng nihao </li>
+            <li>Alger kongcheng nihao </li>
+            <h1>Alger kongcheng nihao</h1>
+        </ul>
+
+        <xmp>
+            /* 选择第一个 */
+            main>ul li:nth-child(1) {
+            color: red;
+            }
+
+            /* 选择偶数项 */
+            main>ul li:nth-child(2n) {
+            color: blue;
+            }
+
+            /* 选择最后一个 */
+            main>ul li:nth-last-child(1) {
+            color: yellow;
+            }
+
+            /*选择最后两个*/
+            main>ul li:nth-last-child(-n+2) {
+            color: green;
+            }
+
+            /* 选择第一个h1标签 */
+            main>ul h1:nth-of-type(1) {
+            color: brown;
+            }
+            
+            /* 选择前五个并且排除第三个和第一个 */
+            main>ul li:nth-child(-n+5):not(:nth-child(3)):not(:first-child){
+            border: 2px solid black;
+            }
+        </xmp>
+    </main>
+</body>
+
+</html>

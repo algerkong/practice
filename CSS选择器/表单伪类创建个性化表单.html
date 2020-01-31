@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alger 通过表单伪类创建个性化表单</title>
+
+    <style>
+        xmp {
+            width: 100%;
+            overflow: hidden;
+            font-size: 16px;
+            color: #FFFFFF;
+            background-color: #282c34;
+            border-radius: 10px;
+        }
+
+        xmp::selection {
+            background-color: #FFFFFF;
+            color: #333333;
+        }
+
+        main {
+            width: 1200px;
+            overflow: hidden;
+            margin: 0 auto;
+            font-size: 30px;
+        }
+
+        input {
+            /*去掉文本框选择线*/
+            outline: none;
+        }
+
+        /* 不可操作的文本框变为红色 */
+        input:disabled {
+            background-color: #ddd;
+        }
+
+        /* 可操作的文本框变为绿色 */
+        input:enabled {
+            background-color: green;
+        }
+
+        /* 选择的单选按钮文字变为绿色 */
+        input:checked+label {
+            color: green;
+        }
+
+        /* 将必填框的的边框改为蓝色 */
+        input:required {
+            border: solid 2px blue;
+        }
+
+        /* 将非必填框的的边框改为黄色 */
+        input:optional {
+            border: solid 2px yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <!-- disabled  使输入框不能操作 -->
+            <input type="text" disabled>
+            <input type="text">
+            <hr>
+            <input type="radio" name="sex" id="boy">
+            <label for="boy">男</label>
+            <!-- checked是默认选择 -->
+            <input type="radio" name="sex" id="girl" checked>
+            <label for="girl">女</label>
+            <hr>
+            <!-- required是必须填写的框 -->
+            <input type="text" required name="" id="">
+            <button>确定</button>
+        </form>
+
+        <xmp>
+            input {
+                /*去掉文本框选择线*/
+                outline: none;
+            }
+    
+            /* 不可操作的文本框变为红色 */
+            input:disabled {
+                background-color: #ddd;
+            }
+    
+            /* 可操作的文本框变为绿色 */
+            input:enabled {
+                background-color: green;
+            }
+    
+            /* 选择的单选按钮文字变为绿色 */
+            input:checked+label {
+                color: green;
+            }
+    
+            /* 将必填框的的边框改为蓝色 */
+            input:required {
+                border: solid 2px blue;
+            }
+    
+            /* 将非必填框的的边框改为黄色 */
+            input:optional {
+                border: solid 2px yellow;
+            }
+        </xmp>
+    </main>
+</body>
+
+</html>
