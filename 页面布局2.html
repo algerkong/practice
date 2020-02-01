@@ -8,51 +8,40 @@
     <title>Alger 页面布局2</title>
 
     <style>
-        code,
-        pre {
-            color: #ccc;
-            background: none;
-            font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-            font-size: 1em;
-            text-align: left;
-            white-space: pre;
-            word-spacing: normal;
-            word-break: normal;
-            word-wrap: normal;
-            line-height: 1.5;
-            -moz-tab-size: 4;
-            -o-tab-size: 4;
-            tab-size: 4;
-            -webkit-hyphens: none;
-            -ms-hyphens: none;
-            hyphens: none;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        header {
+            height: 60px;
+            background-color: blueviolet;
+        }
+
+        main {
+            flex-grow: 1;
+            background-color: #dddddd;
+        }
+
+        footer {
+            height: 60px;
+            background-color: burlywood;
         }
     </style>
+
 </head>
 
 <body>
-    <pre>
-        <code>
-            <!-- zhojanvkjdnfd -->
-            <html>
-                <body>
-                    <p>
-                        Hello World
-                    </p>
-                </body>
-            </html>
-            <!-- dsafjkdsaf -->
-        </code>
-    </pre>
-
-    <pre>
-        <script type="text/html" style="display: block;">
-        <div>
-        哈哈哈
-        </div>
-        <h4>dfdfd</h4>
-        </script>
-    </pre>
+    <header></header>
+    <main></main>
+    <footer></footer>
 </body>
 
 </html>
