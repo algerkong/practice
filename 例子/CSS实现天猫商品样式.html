@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS实现天猫商品样式</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 100px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        main {
+            width: 500px;
+            height: 400px;
+            background-color: #696969;
+            margin: 0 auto;
+            border: 5px solid #000;
+            overflow: hidden;
+        }
+
+        main>article {
+            height: 268px;
+            overflow: hidden;
+            transition: .8s;
+        }
+
+        main:hover article {
+            height: 0;
+        }
+
+        article>div img {
+            height: 270px;
+        }
+
+        main>div p{
+            color: rgba(255, 255, 255, 0);
+            transition: 1s;
+        }
+        main>div {
+            color: #ffffff;
+            padding: 20px;
+            border-top: 5px solid #ffffff;
+            box-sizing: border-box;
+            transition: 1s;
+        }
+
+        main:hover div{
+            border: none;
+        }
+
+        main:hover div>p{
+            color: rgba(255, 255, 255, 1);
+        }
+
+        div>h2 {
+            font-size: 30pt;
+            line-height: 2.8em;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>CSS实现天猫商品样式</h1>
+    <main>
+        <article>
+            <div><img
+                    src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7bc54a61b927dd8c54ddd39a0acf0254.jpg?w=632&h=340"
+                    alt=""></div>
+        </article>
+        <div>
+            <h2>小米CC9PRO [一亿像素]</h2>
+            <p><span style="color: red;">「分期享6期免息，购机享1TB小米云空间1年使用权」</span><br> 1亿像素主摄 / 全场景五摄像头 / 四闪光灯 / 3200万自拍 / 10
+                倍混合光学变焦，50倍数字变焦 / 5260mAh ⼤电量 / 标配 30W疾速快充 / ⼩米⾸款超薄屏下指纹 / 德国莱茵低蓝光认证 / 多功能NFC / 红外万能遥控 / 1216超线性扬声器</p>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ALger js</title>
+    
+    <script>
+        function login(){ 
+            var user1 = document.getElementById('user');
+            var pwd1 = document.getElementById('pwd');
+
+            alert('你输入的账号是：'+user1.innerText+'你输入的密码是'+pwd1.innerHTML);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="user" placeholder="请输入用户名">
+    <br>
+    <input type="password" name="" id="pwd" placeholder="请输入密码">
+    <br>
+    <button onclick="login()">登录</button>
+</body>
+</html>
