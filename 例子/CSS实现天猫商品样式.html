@@ -103,20 +103,20 @@
             height: 205px;
             overflow: hidden;
             position: relative;
-            border: 5px solid #e0e0e0;
+            border: 5px solid #ffffff;
         }
         .sp-page>.img-box>img{
             width: 390px;
             height: 205px;
             transition: all 0.3s linear 0s;
         }
-        .sp-page>.img-box>img:hover{
+        .img-box:hover img{
             transform: scale(1.2);
         }
         .text{
             position: absolute;
             top: -100%;
-            left: 0;
+            left: -100%;
             width: 390px;
             height: 205px;
             background-color: #ffffffd0;
@@ -127,6 +127,7 @@
         }
         .img-box:hover .text{
             top: 0;
+            left: 0;
         }
         button{
             margin: 10px;
