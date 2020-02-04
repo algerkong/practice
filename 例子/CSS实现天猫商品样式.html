@@ -44,10 +44,11 @@
             height: 270px;
         }
 
-        main>div p{
+        main>div p {
             color: rgba(255, 255, 255, 0);
             transition: 1s;
         }
+
         main>div {
             color: #ffffff;
             padding: 20px;
@@ -56,11 +57,11 @@
             transition: 1s;
         }
 
-        main:hover div{
+        main:hover div {
             border: none;
         }
 
-        main:hover div>p{
+        main:hover div>p {
             color: rgba(255, 255, 255, 1);
         }
 
@@ -87,6 +88,71 @@
                 倍混合光学变焦，50倍数字变焦 / 5260mAh ⼤电量 / 标配 30W疾速快充 / ⼩米⾸款超薄屏下指纹 / 德国莱茵低蓝光认证 / 多功能NFC / 红外万能遥控 / 1216超线性扬声器</p>
         </div>
     </main>
+
+    <style>
+        .sp-page{
+            margin: 50px auto;
+            width: 400px ;
+            height: 215px;
+            border: 20px solid #4b4b4b;
+            overflow: hidden;
+            
+        }
+        .sp-page>.img-box{
+            width: 390px;
+            height: 205px;
+            overflow: hidden;
+            position: relative;
+            border: 5px solid #e0e0e0;
+        }
+        .sp-page>.img-box>img{
+            width: 390px;
+            height: 205px;
+            transition: all 0.3s linear 0s;
+        }
+        .sp-page>.img-box>img:hover{
+            transform: scale(1.2);
+        }
+        .text{
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 390px;
+            height: 205px;
+            background-color: #ffffffd0;
+            overflow: hidden;
+            transition: 1s;
+            transition-delay: .5s;
+            text-align: center;
+        }
+        .img-box:hover .text{
+            top: 0;
+        }
+        button{
+            margin: 10px;
+            padding: 5px 10px;
+            background-color: #2a8d8d;
+            color: white;
+            border: #000 solid 1px;
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="sp-page">
+        <div class="img-box">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7bc54a61b927dd8c54ddd39a0acf0254.jpg?w=632&h=340" alt="">
+            <div class="text">
+                <h1>关于图片的介绍</h1>
+                <p>关于图片的介绍关于图片的介于图片于图片的的绍</p>
+                <p>关于图片的介绍于图片的关于图片的介绍</p>
+                <p>关于图片的介绍关于图片的介绍</p>
+                <button>Learn more</button>
+            </div>
+        </div>
+        
+    </div>
+
+
 </body>
 
 </html>
