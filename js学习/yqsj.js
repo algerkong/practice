@@ -12,6 +12,8 @@ $(function () {
             // console.log(data);
             //调用show_map方法 展示图标
             show_map(data);
+
+            show_zxt(data);
         }
     });
 })
@@ -51,7 +53,7 @@ function show_map(data) {
     let myChart = echarts.init(document.getElementById('main'));
 
     //定义颜色分别对应人数 个 十 百 千 万
-    let colors = ["#f3c7c7", "#e68181", "#e43e3e","#b23232", "#7b0000"];
+    let colors = ["#f3c7c7", "#e68181", "#e43e3e", "#b23232", "#7b0000"];
     //确定每个省份的人数及对应的颜色
 
     let act_data = data.data.list;
@@ -62,10 +64,10 @@ function show_map(data) {
 
     //获取省份 和 人数
     for (let i = 0; i < act_data.length; i++) {
-        let act_item = act_data[i];// "湖北 确诊 27100 例，治愈 1440 例，死亡 780 例"
-        let ret = act_item.split(",")[0];//湖北 确诊 27100 例
-        let pr = ret.split(" ")[0];//湖北
-        let nu = ret.split(" ")[2];//27100
+        let act_item = act_data[i]; // "湖北 确诊 27100 例，治愈 1440 例，死亡 780 例"
+        let ret = act_item.split(",")[0]; //湖北 确诊 27100 例
+        let pr = ret.split(" ")[0]; //湖北
+        let nu = ret.split(" ")[2]; //27100
         // console.log(pr,nu);
         colorMap[pr] = nu;
     }
@@ -73,8 +75,8 @@ function show_map(data) {
     for (let i = 0; i < province_data.length; i++) {
 
         let colorIndex = colorMap[province_data[i]].length - 1;
-        if(colorIndex>4){
-            colorIndex =4;
+        if (colorIndex > 4) {
+            colorIndex = 4;
         }
 
         let sd = {
@@ -106,7 +108,7 @@ function show_map(data) {
     let option = {
 
         title: {
-            text:'全国新冠肺炎疫情实时地图'
+            text: '全国新冠肺炎疫情实时地图'
         },
 
         toolbox: {
@@ -117,16 +119,15 @@ function show_map(data) {
             }
         },
 
-        tooltip:{
-            show : true,
-            formatter:function(d){
-                return "省份："+d.name + "<br/>"+"人数：" + colorMap[d.name];
+        tooltip: {
+            show: true,
+            formatter: function (d) {
+                return "省份：" + d.name + "<br/>" + "人数：" + colorMap[d.name];
             }
         },
 
 
-        series: [
-            {
+        series: [{
             type: 'map',
             map: 'china',
             label: {
@@ -162,8 +163,8 @@ function show_map(data) {
             data: p_data,
         }],
         dataRange: {
-            x: "-1000 px",
-            y: "-1000 px",
+            x: "0 px",
+            y: "0 px",
             splitList: s_data
         }
     };
@@ -171,3 +172,83 @@ function show_map(data) {
     // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option);
 }
+
+
+// function show_zxt(data) {
+//     // 基于准备好的dom，初始化echarts实例
+//     let myChart = echarts.init(document.getElementById('zxt'));
+
+//     let act_data = data.data.history;
+    
+//     let date = [];
+//     for(let i=0; i<7;i++){
+//         date[i] = act_data[i].date;
+//     }
+    
+
+//     option = {
+//         title: {
+//             text: '变化数据'
+//         },
+//         tooltip: {
+//             trigger: 'axis'
+//         },
+//         legend: {
+//             data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+//         },
+//         grid: {
+//             left: '3%',
+//             right: '4%',
+//             bottom: '3%',
+//             containLabel: true
+//         },
+//         toolbox: {
+//             feature: {
+//                 saveAsImage: {}
+//             }
+//         },
+//         xAxis: {
+//             type: 'category',
+//             boundaryGap: false,
+//             data: [date[6], date[5], date[4], date[3],date[2], date[1],date[0]]
+//         },
+//         yAxis: {
+//             type: 'value'
+//         },
+//         series: [{
+//                 name: '邮件营销',
+//                 type: 'line',
+//                 stack: '总量',
+//                 data: [120, 132, 101, 134, 90, 230, 210]
+//             },
+//             {
+//                 name: '联盟广告',
+//                 type: 'line',
+//                 stack: '总量',
+//                 data: [220, 182, 191, 234, 290, 330, 310]
+//             },
+//             {
+//                 name: '视频广告',
+//                 type: 'line',
+//                 stack: '总量',
+//                 data: [150, 232, 201, 154, 190, 330, 410]
+//             },
+//             {
+//                 name: '直接访问',
+//                 type: 'line',
+//                 stack: '总量',
+//                 data: [320, 332, 301, 334, 390, 330, 320]
+//             },
+//             {
+//                 name: '搜索引擎',
+//                 type: 'line',
+//                 stack: '总量',
+//                 data: [820, 932, 901, 934, 1290, 1330, 1320]
+//             }
+//         ]
+//     };
+
+
+//     // 使用刚指定的配置项和数据显示图表。
+//     myChart.setOption(option);
+// }
